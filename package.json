@@ -1,0 +1,15 @@
+{
+  "name": "betterinsta",
+  "version": "1.2.0",
+  "private": true,
+  "description": "Unofficial Firefox extension that adds a quick search button to Instagram on the web.",
+  "license": "MIT",
+  "scripts": {
+    "start": "web-ext run --source-dir .",
+    "lint": "web-ext lint --source-dir . --ignore-files package.json package-lock.json README.md PRIVACY.md LICENSE docs/**",
+    "build": "web-ext build --source-dir . --overwrite-dest --ignore-files package.json package-lock.json README.md PRIVACY.md LICENSE .gitignore docs/**"
+  },
+  "devDependencies": {
+    "web-ext": "^8.0.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "betterinsta",
+  "version": "1.2.0",
+  "description": "Unofficial. Adds a quick search button to Instagram on the web that opens Instagram's own keyword search for reels.",
+  "homepage_url": "https://github.com/fx9ad/betterinsta",
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "betterinsta@fx9ad.github.io",
+      "strict_min_version": "128.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
